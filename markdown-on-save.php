@@ -21,8 +21,10 @@ License: GPL v2
  *
  */
 
+define(WP_INCLUDE_DIR, preg_replace('/wp-content$/', 'wp-includes', WP_CONTENT_DIR));
+
 if(!function_exists('get_plugin_data')) {
- 	require_once('wp-includes/plugin.php');
+ 	require_once(WP_INCLUDE_DIR . '/plugin.php');
 }
 
 // Define the default path and URL for the WP Editor plugin
